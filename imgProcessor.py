@@ -1,18 +1,18 @@
-from email.mime import image
+import typer
 from PIL import Image
 
-def imgsizing():
+obj = typer.Typer()
+
+@obj.command()
+def finder():
+    print("Enter the command below to convert image format")
+    print("python3 imgProcessor.py imgformat")
+    print("Ener the command below to resize the image")
+    print("python3 imgProcessor.py imgsizing")
     
-    imgname = str(input("Enter image name\n"))
-    width = int(input("Enter width\n"))
-    height = int(input("Enter height\n"))
-    size = width,height
-    
-    image2 = Image.open(f'{imgname}') # Here used f string
-    image2.thumbnail(size)
-    image2.save(f'11{imgname}')
-    
-def imgformatting():
+@obj.command()
+def imgformat():
+
     print("Conertions on jpg,jpeg,png files only")
     imgname = str(input("Enter image with extention\n"))
     imgformat = str(input("Enter image format\n")) 
@@ -32,11 +32,17 @@ def imgformatting():
         image01.save('img001.jpg')
         image01.save('img0012.png')
         print("jpeg image converted into png ang jpg")
-        
-    
-imgsizing()                
-    #image1 = Image.open('Pic 1.jpg')
-    #image1.save('Img001.jpeg')
-    #image1.save('Img001.jpg')
 
-imgformatting()
+@obj.command()
+def imgsizing():
+    imgname = str(input("Enter image name\n"))
+    width = int(input("Enter width\n"))
+    height = int(input("Enter height\n"))
+    size = width,height
+    
+    image2 = Image.open(f'{imgname}') # Here used f string
+    image2.thumbnail(size)
+    image2.save(f'11{imgname}')
+
+if __name__ == "__main__":
+    obj()
