@@ -14,7 +14,7 @@ def finder():
 def imgformat():
 
     print("Conertions on jpg,jpeg,png files only")
-    imgname = str(input("Enter image with extention\n"))
+    imgname = str(input("Enter imagename with extention\n"))
     imgformat = str(input("Enter image format\n")) 
     
     if imgformat == 'png':
@@ -35,14 +35,15 @@ def imgformat():
 
 @obj.command()
 def imgsizing():
-    imgname = str(input("Enter image name\n"))
-    width = int(input("Enter width\n"))
-    height = int(input("Enter height\n"))
+    imgname = str(input("Enter imagename with extention\n"))
+    width = int(input("Enter new image width\n"))
+    height = int(input("Enter new image height\n"))
     size = width,height
     
     image2 = Image.open(f'{imgname}') # Here used f string
     image2.thumbnail(size)
     image2.save(f'11{imgname}')
+    
 
 if __name__ == "__main__":
     obj()
