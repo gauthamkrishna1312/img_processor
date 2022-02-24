@@ -43,6 +43,7 @@ def imgsizing():
     image2 = Image.open(f'{imgname}') # Here used f string
     image2.thumbnail(size)
     image2.save(f'11{imgname}')
+    print("Image resizing is completed")
     
 
 if __name__ == "__main__":
