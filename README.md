@@ -12,4 +12,4 @@ You can run the the python file with the command to know the working of the tool
     
  * For converting format of the image
     
-    python3 imgProcessor.py imgsformat
+    python3 imgProcessor.py imgformat
