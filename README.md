@@ -2,6 +2,7 @@
 A command line tool for converting Image formats and size
 Formats convertions done only through jpg,jpeg,png formats there is no options to work with other image formats
 You can run the the python file with the command to know the working of the tool
+First paste image to be processed in the samedirectory where the imgProcessor.py exists
 * In linux systems with leatest python vertion enter the finder command for knowing the instructions
 
     python3 imgProcessor finder or python imgProcessor finder
